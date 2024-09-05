@@ -135,3 +135,56 @@ nav button:hover {
 #marcadores-numeros-btn:hover {
     background-color: #0069d9;
 }
+
+.comentarios {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.comentarios h3 {
+    margin-top: 0;
+}
+
+#comentarios-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#comentarios-list li {
+    margin-bottom: 10px;
+}
+
+.add-comentario-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+#add-comentario-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+.enviar-comentario-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#enviar-comentario-btn:hover {
+    background-color: #0069d9;
+}
+
+.comentario-input {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.comentario-item {
+    margin-bottom: 5px;
+}

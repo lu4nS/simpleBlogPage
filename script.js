@@ -2,6 +2,7 @@ let novoPostForm = document.getElementById('novo-post-form');
 let postsFeed = document.getElementById('posts-feed');
 let posts = [];
 let formatoSelecionado = null;
+let comentarios = [];
 
 
 function criarNovoPost() {
@@ -12,10 +13,13 @@ function criarNovoPost() {
     let post = {
         titulo: titulo,
         conteudo: conteudo,
-        tags: tags
+        tags: tags,
+        comentarios: []
+
     };
 
     posts.push(post);
+    comentarios.push([]);
 
     document.getElementById('titulo').value = '';
     document.getElementById('conteudo').value = '';
@@ -33,10 +37,35 @@ function exibirPosts() {
                 <p class="conteudo">${post.conteudo}</p>
                 <p class="tags">${post.tags}</p>
                 <button class="deletar-btn" onclick="deletarPost(${index})">Deletar</button>
+                <div class="comentarios">
+                    <h3>Comentários</h3>
+                    <ul id="comentarios-list-${index}"></ul>
+                    <form id="add-comentario-form-${index}" class="add-comentario-form">
+                        <input type="text" id="comentario-text-${index}" placeholder="Adicione um comentário" class="comentario-input">
+                        <button type="button" id="enviar-comentario-btn-${index}" class="enviar-comentario-btn">Enviar</button>
+                    </form>
+                </div>
             </div>
         `;
 
         postsFeed.innerHTML += postHTML;
+
+        let comentariosList = document.getElementById(`comentarios-list-${index}`);
+        comentariosList.innerHTML = '';
+        comentarios[index].forEach((comentario) => {
+            let comentarioHTML = `<li class="comentario-item">${comentario}</li>`;
+            comentariosList.innerHTML += comentarioHTML;
+        });
+
+        let enviarComentarioBtn = document.getElementById(`enviar-comentario-btn-${index}`);
+        enviarComentarioBtn.addEventListener('click', () => {
+            let comentarioText = document.getElementById(`comentario-text-${index}`).value;
+            if (comentarioText !== '') {
+                comentarios[index].push(comentarioText);
+                document.getElementById(`comentario-text-${index}`).value = '';
+                exibirPosts(); // update post display
+            }
+        });
     });
 }
 

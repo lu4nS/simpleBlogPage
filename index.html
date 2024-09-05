@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Blog</h1>
+    </header>
+    <nav>
+        <button id="novo-post-btn">Novo Post</button>
+        <button id="ver-posts-btn">Ver Posts</button>
+    </nav>
+    <main id="main-content">
+        <form id="novo-post-form">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" required>
+            <label for="conteudo">Conteúdo:</label>
+            <button type="button" id="negrito-btn">Negrito</button>
+            <button type="button" id="italico-btn">Itálico</button>
+            <button type="button" id="marcadores-balas-btn">Marcadores</button>
+            <button type="button" id="marcadores-numeros-btn">Números</button>
+            <textarea id="conteudo" required></textarea>
+            <label for="tags">Tags:</label>
+            <input type="text" id="tags" required>
+            <button type="button" id="publicar-btn">Publicar</button>
+            
+        </form>
+        <div id="posts-feed"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

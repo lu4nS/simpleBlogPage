@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+nav button:hover {
+    background-color: #0069d9;
+}
+
+
+#main-content {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#novo-post-form {
+    align-items: center;
+}
+
+#novo-post-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#novo-post-form input[type="text"],
+#novo-post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+#novo-post-form button[type="button"] {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+#novo-post-form button[type="button"]:hover {
+    background-color: #0069d9;
+}
+
+#posts-feed {
+    display: none;
+}
+
+#posts-feed .post {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#posts-feed .post .titulo {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#posts-feed .post .conteudo {
+    margin-bottom: 20px;
+}
+
+#novo-post-form #conteudo {
+    margin: 10px 0;
+    height: 100px;
+    resize: vertical;
+}
+
+#posts-feed .post .tags {
+    font-size: 14px;
+    color: #666;
+}
+
+#posts-feed .post .deletar-btn {
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+#posts-feed .post .deletar-btn:hover {
+    background-color: #bd2130;
+}
+
+#negrito-btn,
+#italico-btn,
+#marcadores-balas-btn,
+#marcadores-numeros-btn {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 10px 0;
+}
+
+#negrito-btn:hover,
+#italico-btn:hover,
+#marcadores-balas-btn:hover,
+#marcadores-numeros-btn:hover {
+    background-color: #0069d9;
+}
